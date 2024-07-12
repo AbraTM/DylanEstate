@@ -7,7 +7,7 @@ export default function PropertyDetails({formData, handleChange}){
         const dataElements = data.map((item, index) => {
             return(
                 <div className="custom-radio-cn-A" key={index}>
-                    <input  type="radio" value={item} id={`${name} : ${item}`} name={name} className="custom-radio-A" onChange={event => handleChange(event)}/>
+                    <input required type="radio" value={item} id={`${name} : ${item}`} name={name} className="custom-radio-A" onChange={event => handleChange(event)}/>
                     <label htmlFor={`${name} : ${item}`} className="custom-radio-label-A">{item}</label>
                 </div>
             )
@@ -79,11 +79,11 @@ export default function PropertyDetails({formData, handleChange}){
                     <h1><span style={{color: "red"}}>*</span>Property for :</h1>
                     <div className="radio-btns-cn">
                         <div className="radio-btn-cn">
-                            <input  type="radio" id="rent" value="Rent" name="Property_For" onChange={event => handleChange(event)}/>
+                            <input required type="radio" id="rent" value="Rent" name="Property_For" onChange={event => handleChange(event)}/>
                             <label htmlFor="rent" className="info-label">Rent</label>
                         </div>
                         <div className="radio-btn-cn">
-                            <input  type="radio" id="sale" value="Sale" name="Property_For" onChange={event => handleChange(event)}/>
+                            <input required type="radio" id="sale" value="Sale" name="Property_For" onChange={event => handleChange(event)}/>
                             <label htmlFor="sale" className="info-label">Sale</label>
                         </div>
                     </div>
@@ -93,21 +93,21 @@ export default function PropertyDetails({formData, handleChange}){
                     <h1><span style={{color: "red"}}>*</span>Property Type :</h1>
                     <div className="radio-btns-cn">
                         <div className="radio-btn-cn">
-                            <input  type="radio" id="residential" value="Residential" name="Property_Type" onChange={event => {
+                            <input required type="radio" id="residential" value="Residential" name="Property_Type" onChange={event => {
                                 handleChange(event)
                                 handleAdditionalDropdown(event)
                             }}/>
                             <label htmlFor="residential" className="info-label">Residential</label>
                         </div>
                         <div className="radio-btn-cn">
-                            <input  type="radio" id="commercial" value="Commercial" name="Property_Type" onChange={event => {
+                            <input required type="radio" id="commercial" value="Commercial" name="Property_Type" onChange={event => {
                                 handleChange(event)
                                 handleAdditionalDropdown(event)
                             }}/>
                             <label htmlFor="commercial" className="info-label">Commercial</label>
                         </div>
                         <div className="radio-btn-cn">
-                            <input  type="radio" id="land/plot" value="Land / Plot" name="Property_Type" onChange={event => handleChange(event)}/>
+                            <input required type="radio" id="land/plot" value="Land / Plot" name="Property_Type" onChange={event => handleChange(event)}/>
                             <label htmlFor="land/plot" className="info-label">Land / Plot</label>
                         </div>
                     </div>
@@ -125,12 +125,12 @@ export default function PropertyDetails({formData, handleChange}){
                 <div className="grid-temp">
                     <div className="info-cn">
                         <label htmlFor="built-up-area" className="info-label">Built up Area<span style={{color: "red"}}>*</span></label>
-                        <input  type="numeric" id="built-up-area" name="Built_Up_Area" placeholder="0 Sq.Ft." className="placeholder-space info-input" onChange={event => handleChange(event)}/>
+                        <input required type="numeric" id="built-up-area" name="Built_Up_Area" placeholder="0 Sq.Ft." className="placeholder-space info-input" onChange={event => handleChange(event)}/>
                     </div>
 
                     <div className="info-cn">
                         <label htmlFor="carpet-area" className="info-label">Carpet Area<span style={{color: "red"}}>*</span></label>
-                        <input  type="numeric" id="carpet-area" name="Carpet_Area" placeholder="0 Sq.Ft." className="placeholder-space info-input" onChange={event => handleChange(event)}/>
+                        <input required type="numeric" id="carpet-area" name="Carpet_Area" placeholder="0 Sq.Ft." className="placeholder-space info-input" onChange={event => handleChange(event)}/>
                     </div>
                 </div>
 
@@ -138,18 +138,18 @@ export default function PropertyDetails({formData, handleChange}){
                     <div className="floor-grid">
                         <div className="info-cn">
                             <label htmlFor="property-on-floor" className="info-label">Property on Floor<span style={{color: "red"}}>*</span></label>
-                            <input  type="numeric" id="property-on-floor" name="Property_On_Floor" placeholder="Floor" className="info-input" onChange={event => handleChange(event)}/>
+                            <input required type="numeric" id="property-on-floor" name="Property_On_Floor" placeholder="Floor" className="info-input" onChange={event => handleChange(event)}/>
                         </div>
 
                         <div className="info-cn">
                             <label htmlFor="total-floors" className="info-label">Total Floors<span style={{color: "red"}}>*</span></label>
-                            <input  type="numeric" id="total-floors" name="Total_Floors" placeholder="Total Floors" className="info-input" onChange={event => handleChange(event)}/>
+                            <input required type="numeric" id="total-floors" name="Total_Floors" placeholder="Total Floors" className="info-input" onChange={event => handleChange(event)}/>
                         </div>
                     </div>
 
                     <div className="info-cn">
                         <label htmlFor="property-facing" className="info-label">Property Facing<span style={{color: "red"}}>*</span></label>
-                        <select  name="Property_Facing" className="select-loc info-select" onChange={event => handleChange(event)} defaultValue="Select">
+                        <select required name="Property_Facing" className="select-loc info-select" onChange={event => handleChange(event)} defaultValue="Select">
                             <option value="Select">Select</option>
                             <option value="North">North</option>
                             <option value="South">South</option>
