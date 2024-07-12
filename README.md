@@ -8,5 +8,5 @@ Tech Used :
 
 Deployment :
 
---> Webpage is deployed using vercel
+--> Webpage is deployed using Vercel.
 --> Backened(Server) is deployed using Render, first time submitting the data might take upto 50 seconds because of the free backend deployement restriction after that it should be fine.
