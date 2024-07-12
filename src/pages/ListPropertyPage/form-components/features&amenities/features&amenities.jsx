@@ -48,7 +48,6 @@ export default function FeaturesAndAmeneties({formData, handleChange, getAmeniti
             tempList.push(data)
             return tempList
         })
-        console.log(data)
         getAmenities(amenitiesList)
     }
 

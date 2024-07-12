@@ -6,7 +6,6 @@ export default function ConformationPage(){
     const navigate = useNavigate()
     const loc = useLocation()
     const propertyID = loc.state.data
-    console.log(propertyID)
     return(
         <div className="conformation-page">
             <div className="conformation-page-content">

@@ -114,7 +114,7 @@ export default function PreopertyPreview(){
 
     const amenitiesElements = data?.Society_Amenities.map((item, index) => {
         return(
-            <img src={`../src/assets/amenities/${item}.svg`} key={index}></img>
+            <img src={`/amenities/${item}.svg`} key={index}></img>
         )
     })
 
