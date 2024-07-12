@@ -4,11 +4,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export default function Overlay(props){
+    const [buttonText, setButtonText] = React.useState("Continue")
     const [errorMessage, setErrorMessage] = React.useState("")
     const navigate = useNavigate()
-    console.log(props.data)
     const postData = async() => {
         try {
+            setButtonText("Saving...")
             const {data} = await axios.post('https://dylanestate.onrender.com/api/v1/list-property-form', props.data, {
                 headers: {
                   'Content-Type': 'application/json'
@@ -31,7 +32,7 @@ export default function Overlay(props){
                 <div className="overlay-content">
                     <h1>POST PROPERTY ON DYLAN ESTATE?<span style={{color: "red"}}>*</span></h1>
                     <div className="overlay-btn">
-                        <button onClick={postData}>Continue</button>
+                        <button onClick={postData}>{buttonText}</button>
                         <div>
                             By continuing you agree to our 
                             <span>Terms and Conditions & Privacy Policy</span>
