@@ -13,8 +13,8 @@ import PreopertyPreview from "./pages/PropertyPreview/property-preview"
 import Verify from "./pages/SellerHomePage/verify/verify"
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path="/DylanEstate" element={<NavBar/>}>
-      <Route path="" element={<SellerHomePage/>}>
+  <Route path="/" element={<NavBar/>}>
+      <Route path="/" element={<SellerHomePage/>}>
           <Route index element={<HomePageForm/>}/>
           <Route path="verify" element={<Verify/>}/>
       </Route>
