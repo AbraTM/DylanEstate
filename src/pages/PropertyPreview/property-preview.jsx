@@ -104,7 +104,7 @@ export default function PreopertyPreview(){
         return (
             <div className="po-element" key={index}>
                 <div className="po-element-data">
-                    <img src={`../src/pages/PropertyPreview/assets/property-overview/${item.url}`}></img>
+                    <img src={`/property-overview/${item.url}`}></img>
                     {item.data}
                 </div>
                 <div className="po-element-name">{item.name}</div>

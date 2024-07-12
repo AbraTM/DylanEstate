@@ -2,12 +2,17 @@ import React, { useState, useRef, useMemo, useCallback }from "react";
 import "./location-details.css"
 import "leaflet/dist/leaflet.css"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Icon } from "leaflet";
 
 const center = [19.076090, 72.877426]
 
 export default function LocationDetails({formData, handleChange, getMapLocation}){
     const [draggable, setDraggable] = useState(false)
     const [position, setPosition] = useState(center)
+    const customIcon = new Icon({
+      iconUrl : "https://img.icons8.com/?size=100&id=13800&format=png&color=000000",
+      iconSize : [38, 38]
+    })
     const markerRef = useRef(null)
     const eventHandlers = useMemo(
       () => ({
@@ -63,6 +68,7 @@ export default function LocationDetails({formData, handleChange, getMapLocation}
                       eventHandlers={eventHandlers}
                       position={position}
                       ref={markerRef}
+                      icon={customIcon}
                     >
                     <Popup minWidth={90}>
                       <span onClick={toggleDraggable}>
