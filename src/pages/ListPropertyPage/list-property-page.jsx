@@ -71,21 +71,21 @@ export default function ListPropertyPage(){
         })
     }
 
-    function getPropertyImages(files){
-        setFormData(prevForm => {
-            return {
-                ...prevForm,
-                Images : files
-            }
-        })
-    }
+    // function getPropertyImages(files){
+    //     setFormData(prevForm => {
+    //         return {
+    //             ...prevForm,
+    //             Images : files
+    //         }
+    //     })
+    // }
 
     const {steps, currentStepIndex, step, isFirstStep, isLastStep, back, next} = useMultiStepForm([
         <PropertyDetails {...formData} handleChange={handleChange}/>, 
         <LocationDetails {...formData} handleChange={handleChange} getMapLocation={getMapLocation}/>,
         <FeaturesAndAmeneties {...formData} handleChange={handleChange} getAmenities={getAmenities}/>,
         <PriceDetails {...formData} handleChange={handleChange}/>, 
-        <PropertyImages {...formData} handleChange={handleChange} getPropertyImages={getPropertyImages}/>
+        <PropertyImages {...formData} handleChange={handleChange}/>
     ])
 
     

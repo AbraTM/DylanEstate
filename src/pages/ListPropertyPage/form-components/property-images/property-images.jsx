@@ -3,14 +3,14 @@ import "./property-images.css"
 import CameraIcon from "./assets/camera.svg"
 import PlusSVG from "./assets/plus.svg"
 
-export default function PropertyImages({formData, handleChange, getPropertyImages}){
+export default function PropertyImages({formData, handleChange, }){
     const [selected, setSelected] = React.useState("")
 
     const handlePhotoUpload = (event) => {
         setSelected(URL.createObjectURL(event.target.files[0]))
         handleChange(event)
-        const filesList = event.target.files
-        getPropertyImages(filesList)
+        // const filesList = event.target.files
+        // getPropertyImages(filesList)
     }
      return(
         <div className="property-images-cn">
