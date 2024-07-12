@@ -60,7 +60,6 @@ export default function ListPropertyPage(){
                 Map_Location : position
             }
         })
-        console.log("Get Map Location")
     }
 
     function getAmenities(amenitiesList){
@@ -98,11 +97,6 @@ export default function ListPropertyPage(){
         }
         setDisplayOverlay(true)
     }
-
-    React.useEffect(()=>{
-        console.log(formData)
-    }, [formData])
-    
 
     return(
         <div className="list-property-page">

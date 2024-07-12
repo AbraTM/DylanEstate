@@ -9,7 +9,7 @@ export default function Overlay(props){
     console.log(props.data)
     const postData = async() => {
         try {
-            const {data} = await axios.post('http://localhost:5000/api/v1/list-property-form', props.data, {
+            const {data} = await axios.post('https://dylanestate.onrender.com/api/v1/list-property-form', props.data, {
                 headers: {
                   'Content-Type': 'application/json'
                 }
