@@ -2,7 +2,7 @@ const PropertyDetails = require("../models/property-details")
 
 const createPropertyDetails = async(req, res) => {
     const createProperty = await PropertyDetails.create(req.body)
-    res.json({msg : "YO DATA", data : createProperty._id})
+    res.json({msg : "Data Received", data : createProperty._id})
 }
 
 const getPropertyPreview = async(req, res) => {
