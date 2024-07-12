@@ -56,7 +56,7 @@ export default function FeaturesAndAmeneties({formData, handleChange, getAmeniti
         const passData = item.name
         return(
             <div className="custom-checkbox-cn-C" key={index}>
-                <img src={`/src/assets/amenities/${item.url}`} className="custom-checkbox-label-C"/>
+                <img src={`/amenities/${item.url}`} className="custom-checkbox-label-C"/>
                 <input type="checkbox" className="custom-checkbox-input-C" value={item.name} name="Society_Amenities" onChange={event => newHandleChange(event, passData)}/>
             </div>
         )
